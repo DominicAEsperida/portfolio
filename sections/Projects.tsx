@@ -65,8 +65,8 @@ export default function Projects() {
 
             {/* Project cards grid */}
             <div className="projects-grid">
-                {projects.map((project, index) => (
-                    <AnimateIn key={project.id} delay={index * 0.1} direction="up">
+                {projects.slice(0, 3).map((project) => (
+                    <AnimateIn key={project.id} delay={0.1} direction="up">
                         <ProjectCard project={project} />
                     </AnimateIn>
                 ))}

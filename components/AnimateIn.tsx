@@ -35,6 +35,7 @@ export default function AnimateIn({
                 delay,
                 ease: [0.22, 1, 0.36, 1],
             }}
+            style={{ overflow: "visible" }}
         >
             {children}
         </motion.div>

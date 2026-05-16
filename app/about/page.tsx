@@ -153,10 +153,18 @@ export default function About() {
                         </p>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                             {backendSkills.map((skill) => (
-                                <span key={skill} style={{
-                                    padding: "6px 14px", borderRadius: "100px", fontSize: "12px",
-                                    background: "#1a1a1a", color: "#888", border: "1px solid #2a2a2a",
-                                }}>
+                                <span
+                                    key={skill}
+                                    className="skill-pill skill-pill-backend"
+                                    style={{
+                                        padding: "6px 14px",
+                                        borderRadius: "100px",
+                                        fontSize: "12px",
+                                        background: "#1a1a1a",
+                                        color: "#888",
+                                        border: "1px solid #2a2a2a",
+                                    }}
+                                >
                                     {skill}
                                 </span>
                             ))}
@@ -172,10 +180,18 @@ export default function About() {
                         </p>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                             {frontendSkills.map((skill) => (
-                                <span key={skill} style={{
-                                    padding: "6px 14px", borderRadius: "100px", fontSize: "12px",
-                                    background: "#1a2a0a", color: "#c8f65d", border: "1px solid #2a4a10",
-                                }}>
+                                <span
+                                    key={skill}
+                                    className="skill-pill skill-pill-frontend"
+                                    style={{
+                                        padding: "6px 14px",
+                                        borderRadius: "100px",
+                                        fontSize: "12px",
+                                        background: "#1a2a0a",
+                                        color: "#c8f65d",
+                                        border: "1px solid #2a4a10",
+                                    }}
+                                >
                                     {skill}
                                 </span>
                             ))}
@@ -196,7 +212,7 @@ export default function About() {
 
                     <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                         {experiences.map((exp) => (
-                            <div key={exp.company} style={{
+                            <div key={exp.company} className="stat-card" style={{
                                 background: "#141414", border: "1px solid #1e1e1e",
                                 borderRadius: "16px", padding: "28px 32px",
                             }}>
@@ -247,7 +263,7 @@ export default function About() {
                     }}>
                         Education
                     </p>
-                    <div style={{
+                    <div className="stat-card" style={{
                         background: "#141414", border: "1px solid #1e1e1e",
                         borderRadius: "16px", padding: "24px 28px", display: "flex",
                         justifyContent: "space-between", alignItems: "center",
@@ -289,7 +305,7 @@ export default function About() {
                     </p>
                     <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                         {certificates.map((cert) => (
-                            <div key={cert.title} style={{
+                            <div key={cert.title} className="stat-card" style={{
                                 background: "#141414", border: "1px solid #1e1e1e",
                                 borderRadius: "12px", padding: "20px 24px", display: "flex",
                                 justifyContent: "space-between", alignItems: "center",

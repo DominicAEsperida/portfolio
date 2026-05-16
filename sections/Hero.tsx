@@ -117,7 +117,7 @@ export default function Hero() {
                             border: "1px solid #2a4a10",
                             borderRadius: "100px",
                             padding: "6px 14px",
-                            marginBottom: "32px",
+                            marginBottom: "20px",
                             width: "fit-content",
                         }}
                     >
@@ -135,6 +135,21 @@ export default function Hero() {
                             Open to opportunities
                         </span>
                     </div>
+                </AnimateIn>
+
+                {/* Greeting */}
+                <AnimateIn delay={0} direction="up">
+                    <p style={{
+                        fontSize: "21px",
+                        color: "#888",
+                        marginBottom: "20px",
+                        fontFamily: "Syne, sans-serif",
+                    }}>
+                        👋 Hi! I'm{" "}
+                        <span style={{ color: "#f0f0f0", fontWeight: 500 }}>
+                            Emmanuel Dominic A. Esperida!
+                        </span>
+                    </p>
                 </AnimateIn>
 
                 {/* Headline */}
@@ -223,26 +238,27 @@ export default function Hero() {
                             flexWrap: "wrap",
                             gap: "8px",
                             marginBottom: "48px",
-                            overflow: "hidden",
                             maxWidth: "100%",
+                            overflow: "visible",
+                            paddingTop: "6px",
                         }}
                     >
                         {[
-                            { label: "Node.js", type: "backend" },
                             { label: "MySQL", type: "backend" },
                             { label: "NoSQL", type: "backend" },
                             { label: "JavaScript", type: "backend" },
                             { label: "React", type: "frontend" },
-                            { label: "Next.js", type: "frontend" },
-                            { label: "Flutter(Dart)", type: "frontend" },
-                            { label: "TypeScript", type: "frontend" },
+                            { label: "Flutter", type: "frontend" },
+                            { label: "Laravel", type: "frontend" },
                         ].map((skill) => (
                             <span
                                 key={skill.label}
+                                className={`skill-pill ${skill.type === "frontend" ? "skill-pill-frontend" : "skill-pill-backend"}`}
                                 style={{
                                     padding: "6px 14px",
                                     borderRadius: "100px",
                                     fontSize: "12px",
+                                    whiteSpace: "nowrap",
                                     background: skill.type === "frontend" ? "#1a2a0a" : "#1a1a1a",
                                     color: skill.type === "frontend" ? "#c8f65d" : "#555",
                                     border: `1px solid ${skill.type === "frontend" ? "#2a4a10" : "#2a2a2a"}`,
@@ -251,6 +267,7 @@ export default function Hero() {
                                 {skill.label}
                             </span>
                         ))}
+                        
                     </div>
                 </AnimateIn>
 

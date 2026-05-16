@@ -69,6 +69,7 @@ export default function Projects() {
                     {stats.map((stat) => (
                         <div
                             key={stat.label}
+                            className="stat-card"
                             style={{
                                 background: "#141414",
                                 border: "1px solid #1e1e1e",

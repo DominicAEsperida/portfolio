@@ -95,6 +95,7 @@ export default function Services() {
                     {highlights.map((h) => (
                         <div
                             key={h.label}
+                            className="stat-card"
                             style={{
                                 background: "#141414",
                                 border: "1px solid #1e1e1e",
@@ -136,6 +137,7 @@ export default function Services() {
                     {services.map((service, index) => (
                         <div
                             key={service.id}
+                            className="stat-card"
                             style={{
                                 background: "#141414",
                                 border: "1px solid #1e1e1e",
