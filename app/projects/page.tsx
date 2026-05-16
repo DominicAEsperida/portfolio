@@ -12,7 +12,7 @@ export default function Projects() {
         <div style={{ padding: "48px 32px" }}>
 
             {/* Header */}
-            <AnimateIn direction="left">
+            <AnimateIn direction="up">
                 <p
                     style={{
                         fontSize: "11px",
@@ -24,7 +24,8 @@ export default function Projects() {
                 >
                     My Work
                 </p>
-
+            </AnimateIn>
+            <AnimateIn direction="left" delay={0.1}>
                 <h2
                     style={{
                         fontFamily: "Syne, sans-serif",

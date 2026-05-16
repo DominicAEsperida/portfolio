@@ -75,7 +75,7 @@ export default function About() {
         <div style={{ padding: "64px 48px" }}>
 
             {/* Section label */}
-            <AnimateIn direction="left">
+            <AnimateIn direction="up">
                 <p style={{
                     fontSize: "11px", color: "#444", letterSpacing: "3px",
                     textTransform: "uppercase", marginBottom: "8px",

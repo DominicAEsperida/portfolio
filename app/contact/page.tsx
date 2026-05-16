@@ -63,7 +63,7 @@ export default function Contact() {
         <div style={{ padding: "64px 48px" }}>
 
             {/* Header */}
-            <AnimateIn direction="left" delay={0}>
+            <AnimateIn direction="up" delay={0}>
                 <p
                     style={{
                         fontSize: "11px",
