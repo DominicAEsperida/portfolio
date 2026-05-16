@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ProjectCard"
+import AnimateIn from "@/components/AnimateIn"
 import { projects } from "@/data/projects"
 
 export default function Projects() {
@@ -6,7 +7,7 @@ export default function Projects() {
         <section
             id="projects"
             style={{
-                padding: "64px 48px",
+                padding: "48px 32px",
                 borderBottom: "1px solid #1a1a1a",
                 width: "100%",        // ← add this
                 boxSizing: "border-box", // ← add this
@@ -20,6 +21,7 @@ export default function Projects() {
                     justifyContent: "space-between",
                     marginBottom: "40px",
                     width: "100%",
+                    overflow: "hidden",
                 }}
             >
                 <div>
@@ -63,8 +65,10 @@ export default function Projects() {
 
             {/* Project cards grid */}
             <div className="projects-grid">
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
+                {projects.map((project, index) => (
+                    <AnimateIn key={project.id} delay={index * 0.1} direction="up">
+                        <ProjectCard project={project} />
+                    </AnimateIn>
                 ))}
             </div>
         </section >
