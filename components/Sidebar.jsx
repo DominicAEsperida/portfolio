@@ -16,20 +16,20 @@ export default function Sidebar() {
     const pathname = usePathname()
 
     return (
-        <aside
-            style={{
-                width: "220px",
-                minWidth: "220px",
-                minHeight: "100vh",
-                background: "#111",
-                borderRight: "1px solid #1a1a1a",
-                padding: "32px 20px",
-                display: "flex",
-                flexDirection: "column",
-                position: "sticky",
-                top: 0,
-                height: "100vh",
-            }}
+        <aside className="sidebar"
+        // style={{
+        //     width: "220px",
+        //     minWidth: "220px",
+        //     minHeight: "100vh",
+        //     background: "#111",
+        //     borderRight: "1px solid #1a1a1a",
+        //     padding: "32px 20px",
+        //     display: "flex",
+        //     flexDirection: "column",
+        //     position: "sticky",
+        //     top: 0,
+        //     height: "100vh",
+        // }}
         >
             {/* Logo */}
             <Link href="/">

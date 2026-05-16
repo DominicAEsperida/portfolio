@@ -91,10 +91,10 @@ export default function Contact() {
             {/* Main grid */}
             <div
                 style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1.4fr",
-                    gap: "40px",
-                    alignItems: "start",
+                    display: "contact-grid",
+                    // gridTemplateColumns: "1fr 1.4fr",
+                    // gap: "40px",
+                    // alignItems: "start",
                 }}
             >
 

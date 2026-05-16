@@ -113,13 +113,13 @@ export default function Services() {
             </div>
 
             {/* Service cards */}
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "20px",
-                    marginBottom: "64px",
-                }}
+            <div className="service-card-grid"
+            // style={{
+            //     display: "flex",
+            //     flexDirection: "column",
+            //     gap: "20px",
+            //     marginBottom: "64px",
+            // }}
             >
                 {services.map((service, index) => (
                     <div
@@ -129,7 +129,7 @@ export default function Services() {
                             border: "1px solid #1e1e1e",
                             borderRadius: "16px",
                             padding: "32px",
-                            display: "grid",
+                            display: "service-card-grid",
                             gridTemplateColumns: "1fr 2fr",
                             gap: "40px",
                             alignItems: "start",
@@ -205,17 +205,17 @@ export default function Services() {
             </div>
 
             {/* CTA */}
-            <div
-                style={{
-                    background: "#141414",
-                    border: "1px solid #1e1e1e",
-                    borderRadius: "16px",
-                    padding: "48px 40px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: "24px",
-                }}
+            <div className="cta-row"
+            // style={{
+            //     background: "#141414",
+            //     border: "1px solid #1e1e1e",
+            //     borderRadius: "16px",
+            //     padding: "48px 40px",
+            //     display: "flex",
+            //     alignItems: "center",
+            //     justifyContent: "space-between",
+            //     gap: "24px",
+            // }}
             >
                 <div>
                     <h3

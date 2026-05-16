@@ -47,17 +47,8 @@ export default function About() {
             </h2>
 
             {/* Top section — photo + bio */}
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "200px 1fr",
-                    gap: "48px",
-                    alignItems: "start",
-                    marginBottom: "64px",
-                    paddingBottom: "64px",
-                    borderBottom: "1px solid #1a1a1a",
-                }}
-            >
+            <div className="about-grid">
+
                 {/* Profile photo */}
                 <div>
                     <div
@@ -125,13 +116,7 @@ export default function About() {
                         security practices.
                     </p>
 
-                    <p
-                        style={{
-                            color: "#666",
-                            fontSize: "15px",
-                            lineHeight: 1.9,
-                        }}
-                    >
+                    <p style={{ color: "#666", fontSize: "15px", lineHeight: 1.9 }}>
                         With a solid backend foundation, I'm now expanding into frontend
                         development — learning React and Next.js, and building real projects
                         along the way to bridge both worlds.
@@ -140,16 +125,8 @@ export default function About() {
             </div>
 
             {/* Skills section */}
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: "40px",
-                    marginBottom: "64px",
-                    paddingBottom: "64px",
-                    borderBottom: "1px solid #1a1a1a",
-                }}
-            >
+            <div className="skills-grid">
+
                 {/* Backend */}
                 <div>
                     <p
@@ -238,6 +215,8 @@ export default function About() {
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
+                        flexWrap: "wrap",
+                        gap: "16px",
                     }}
                 >
                     <div>
@@ -271,23 +250,19 @@ export default function About() {
                         >
                             Honorable Mention
                         </span>
-                        <p style={{ color: "#555", fontSize: "12px" }}>
-                            Graduated 2025
-                        </p>
+                        <p style={{ color: "#555", fontSize: "12px" }}>Graduated 2025</p>
                     </div>
                 </div>
             </div>
 
             {/* CTA */}
             <div
+                className="cta-row"
                 style={{
                     background: "#141414",
                     border: "1px solid #1e1e1e",
                     borderRadius: "16px",
                     padding: "40px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
                 }}
             >
                 <div>

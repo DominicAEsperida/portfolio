@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { projects } from "@/data/projects"
 import ProjectCard from "@/components/ProjectCard"
 
@@ -52,7 +51,8 @@ export default function Projects() {
             <div
                 style={{
                     display: "flex",
-                    gap: "24px",
+                    flexWrap: "wrap",
+                    gap: "16px",
                     marginBottom: "10px",
                     paddingBottom: "36px",
                     borderBottom: "1px solid #1a1a1a",
@@ -88,29 +88,22 @@ export default function Projects() {
             </div>
 
             {/* Projects grid */}
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(500px, 1fr))",
-                    gap: "15px",
-                    marginBottom: "50px",
-                }}
-            >
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
-                ))}
+            <div style={{ maxWidth: "1100px", marginBottom: "48px" }}>
+                <div className="projects-grid">
+                    {projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))}
+                </div>
             </div>
 
             {/* CTA */}
             <div
+                className="cta-row"
                 style={{
                     background: "#141414",
                     border: "1px solid #1e1e1e",
                     borderRadius: "16px",
                     padding: "40px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
                 }}
             >
                 <div>

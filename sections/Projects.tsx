@@ -58,16 +58,12 @@ export default function Projects() {
             </div>
 
             {/* Project cards grid */}
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(500px, 1fr))",
-                    gap: "20px",
-                }}
-            >
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
-                ))}
+            <div style={{ maxWidth: "1100px" }}>
+                <div className="projects-grid">
+                    {projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))}
+                </div>
             </div>
         </section>
     )
