@@ -17,7 +17,7 @@ export default function RootLayout({
       <body style={{ display: "flex", minHeight: "100vh" }}>
         <MobileNav />
         <Sidebar />
-        <main style={{ flex: 1 }}>{children}</main>
+        <main style={{ flex: 1, overflow: "hidden" }}>{children}</main>
       </body>
     </html>
   )

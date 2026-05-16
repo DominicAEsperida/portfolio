@@ -12,8 +12,8 @@ export default function Hero() {
         if (!ctx) return
 
         const resize = () => {
-            canvas.width = canvas.offsetWidth
-            canvas.height = canvas.offsetHeight
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
         }
         resize()
 
@@ -29,8 +29,9 @@ export default function Hero() {
                 const char = chars[Math.floor(Math.random() * chars.length)]
                 const y = drops[i] * fontSize
                 const progress = y / canvas.height
-                ctx.fillStyle = progress < 0.3 ? "#c8f65d" : progress < 0.6 ? "#2a4a10" : "#1a2a08"
                 ctx.font = `${fontSize}px monospace`
+                ctx.fillStyle =
+                    progress < 0.3 ? "#c8f65d" : progress < 0.6 ? "#2a4a10" : "#1a2a08"
                 ctx.fillText(char, i * fontSize, y)
 
                 if (y > canvas.height && Math.random() > 0.975) drops[i] = 0
@@ -59,26 +60,45 @@ export default function Hero() {
     return (
         <section id="home" className="hero-section">
 
-            {/* Matrix canvas — full background */}
+            {/* Matrix canvas — true full background */}
             <canvas
                 ref={canvasRef}
                 style={{
                     position: "absolute",
-                    inset: 0,
+                    top: 0,
+                    left: 0,
                     width: "100%",
                     height: "100%",
-                    opacity: 0.4,
+                    opacity: 0.35,
                     zIndex: 0,
                 }}
             />
 
-            {/* Dark overlay so text is readable */}
+            {/* Gradient overlay — fades left side so text is readable */}
             <div
                 style={{
                     position: "absolute",
-                    inset: 0,
-                    background: "linear-gradient(to right, rgba(13,13,13,0.97) 40%, rgba(13,13,13,0.6) 100%)",
-                    zIndex: 0,
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    background:
+                        "linear-gradient(to right, rgba(13,13,13,1) 0%, rgba(13,13,13,0.92) 40%, rgba(13,13,13,0.4) 70%, rgba(13,13,13,0.1) 100%)",
+                    zIndex: 1,
+                }}
+            />
+
+            {/* Bottom fade so it blends into the next section */}
+            <div
+                style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "120px",
+                    background:
+                        "linear-gradient(to top, rgba(13,13,13,1) 0%, rgba(13,13,13,0) 100%)",
+                    zIndex: 1,
                 }}
             />
 
@@ -127,8 +147,8 @@ export default function Hero() {
                 >
                     Backend dev,
                     <br />
-                    going{" "}
-                    <span style={{ color: "#c8f65d" }}>full frontend.</span>
+                    learning to{" "}
+                    <span style={{ color: "#c8f65d" }}>make pixels behave.</span>
                 </h1>
 
                 {/* Subtext */}
@@ -188,7 +208,12 @@ export default function Hero() {
 
                 {/* Skill pills */}
                 <div
-                    style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "48px" }}
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        gap: "8px",
+                        marginBottom: "48px",
+                    }}
                 >
                     {[
                         { label: "Node.js", type: "backend" },
@@ -204,9 +229,11 @@ export default function Hero() {
                                 padding: "6px 14px",
                                 borderRadius: "100px",
                                 fontSize: "12px",
-                                background: skill.type === "frontend" ? "#1a2a0a" : "#1a1a1a",
+                                background:
+                                    skill.type === "frontend" ? "#1a2a0a" : "#1a1a1a",
                                 color: skill.type === "frontend" ? "#c8f65d" : "#555",
-                                border: `1px solid ${skill.type === "frontend" ? "#2a4a10" : "#2a2a2a"}`,
+                                border: `1px solid ${skill.type === "frontend" ? "#2a4a10" : "#2a2a2a"
+                                    }`,
                             }}
                         >
                             {skill.label}
@@ -233,7 +260,9 @@ export default function Hero() {
                             >
                                 {stat.num}
                             </p>
-                            <p style={{ color: "#555", fontSize: "12px", marginTop: "6px" }}>
+                            <p
+                                style={{ color: "#555", fontSize: "12px", marginTop: "6px" }}
+                            >
                                 {stat.label}
                             </p>
                         </div>

@@ -8,6 +8,8 @@ export default function Projects() {
             style={{
                 padding: "64px 48px",
                 borderBottom: "1px solid #1a1a1a",
+                width: "100%",        // ← add this
+                boxSizing: "border-box", // ← add this
             }}
         >
             {/* Section header */}
@@ -17,6 +19,7 @@ export default function Projects() {
                     alignItems: "flex-end",
                     justifyContent: "space-between",
                     marginBottom: "40px",
+                    width: "100%",
                 }}
             >
                 <div>
@@ -51,6 +54,7 @@ export default function Projects() {
                         textDecoration: "none",
                         borderBottom: "1px solid #333",
                         paddingBottom: "2px",
+                        whiteSpace: "nowrap",
                     }}
                 >
                     View all →
@@ -58,13 +62,11 @@ export default function Projects() {
             </div>
 
             {/* Project cards grid */}
-            <div style={{ maxWidth: "1100px" }}>
-                <div className="projects-grid">
-                    {projects.map((project) => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))}
-                </div>
+            <div className="projects-grid">
+                {projects.map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
             </div>
-        </section>
+        </section >
     )
 }
