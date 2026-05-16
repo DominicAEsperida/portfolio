@@ -48,7 +48,34 @@ export const projects: Project[] = [
             "/images/lms-4.png",
             "/images/lms-5.png",
         ],
-        github: "https://github.com/MNJDen/WeFit",
+        github: "",
         live: "",
     },
+    {
+        id: 5,
+        title: "DADSBOL!",
+        description:
+            "Plays exaggerated power dodgeball and dodges through incoming balls with their ragdoll bodies. Evade balls, use players as shields, and win the (KoTS) King of the Streets! title by eliminating all kid gangs from across the streets of Naga!",
+        tags: ["UNITY", "C-SHARP"],
+        images: [
+            "/images/dadsbol-1.png",
+        ],
+        github: "https://github.com/ABE-Games/Dadsbol",
+        live: "",
+    },
+    {
+        id: 4,
+        title: "UpLift",
+        description:
+            "Collaborated with a team to develop a web application providing resources and support for mental health concerns. Responsibilities included building user interfaces and contributing to backend development.",
+        tags: ["Laravel", "HTML", "CSS", "JavaScript"],
+        images: [
+            "/images/uplift-1.png",
+            "/images/uplift-2.png",
+            "/images/uplift-3.png",
+        ],
+        github: "https://github.com/DominicAEsperida/uplift",
+        live: "",
+    },
+
 ]
