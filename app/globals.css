@@ -22,6 +22,42 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
+.skill-pill {
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skill-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(200, 246, 93, 0.15);
+}
+
+.skill-pill-frontend:hover {
+  background: #243d0e !important;
+  border-color: #4a8020 !important;
+  box-shadow: 0 4px 16px rgba(200, 246, 93, 0.25);
+}
+
+.skill-pill-backend:hover {
+  background: #242424 !important;
+  border-color: #444 !important;
+}
+
+.stat-card {
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: #2a4a10 !important;
+  box-shadow: 0 8px 24px rgba(200, 246, 93, 0.08);
+}
+
+.stat-card:hover p:first-child {
+  text-shadow: 0 0 20px rgba(200, 246, 93, 0.5);
+}
+
 /* ================================
    LAYOUT
 ================================ */
