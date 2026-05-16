@@ -2,9 +2,10 @@ import { projects } from "@/data/projects"
 import ProjectCard from "@/components/ProjectCard"
 import AnimateIn from "@/components/AnimateIn"
 const stats = [
-    { num: "3", label: "Projects Built" },
+    { num: "5", label: "Projects Built" },
     { num: "2", label: "Mobile Apps" },
-    { num: "1", label: "Web App" },
+    { num: "2", label: "Web Apps" },
+    { num: "1", label: "Game" },
 ]
 
 export default function Projects() {
